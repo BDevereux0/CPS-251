@@ -3,24 +3,31 @@ package com.ebookfrenzy.androidsample
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
+import com.ebookfrenzy.androidsample.databinding.ActivityMainBinding
+
+//import kotlinx.android.synthetic.main.activity_main.* - removed because i'm using view binding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main) removed because i'm using view binding
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     fun convertCurrency(view: View){
-        if (dollarText.text.isNotEmpty()){
+        if (binding.dollarText.text.isNotEmpty()){
 
-            val dollarValue = dollarText.text.toString().toFloat()
+            val dollarValue = binding.dollarText.text.toString().toFloat()
 
             val euroValue = dollarValue * 0.85f
 
-            textView.text = euroValue.toString()
+            binding.textView.text = euroValue.toString()
         }else {
-            textView.text = getString(R.string.no_value_string)
+            binding.textView.text = getString(R.string.no_value_string)
         }
     }
 }
