@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name"><font size="18">AddName SaveData</font></string>
+    <string name="AddNameBtn">Add Name</string>
+    <string name="enterName"><font size="20">Enter Name</font></string>
+</resources>
