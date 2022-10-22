@@ -5,18 +5,17 @@ plugins {
 }
 
 android {
-    namespace 'com.ebookfrenzy.viewmodeldemo'
-    compileSdk 32
+    namespace 'com.ebookfrenzy.addnamesavedata2'
+    compileSdk 33
 
     buildFeatures{
-        viewBinding true
-        dataBinding true
+        dataBinding = true
     }
 
     defaultConfig {
-        applicationId "com.ebookfrenzy.viewmodeldemo"
+        applicationId "com.ebookfrenzy.addnamesavedata2"
         minSdk 26
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

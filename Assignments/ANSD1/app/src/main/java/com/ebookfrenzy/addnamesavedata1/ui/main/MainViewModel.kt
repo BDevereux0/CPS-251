@@ -5,7 +5,7 @@ package com.ebookfrenzy.addnamesavedata1.ui.main
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-    private var nameList =  ArrayList<String>()
+    private var nameList = ArrayList<String>()
 
     fun addName(name : String){  //fragment calls this method to pass data
         nameList.add(name)
