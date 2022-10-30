@@ -1,4 +1,4 @@
-package com.ebookfrenzy.viewmodeldemo.ui.main
+    package com.ebookfrenzy.viewmodeldemo.ui.main
 
 
 import androidx.lifecycle.ViewModelProvider
@@ -45,7 +45,7 @@ class MainFragment : Fragment() {
         _binding = null
     }*/
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
+    /*override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
@@ -53,11 +53,11 @@ class MainFragment : Fragment() {
 
         //binding.resultText.text = viewModel.getResult().toString() //no longer needed because I'm using the Observer class for liveData (not the MainView)
 
-        /*val resultObserver = Observer<Float>{
+        *//*val resultObserver = Observer<Float>{
             result -> binding.resultText.text = result.toString()
-        }*/ //removed for Data Binding Tutorial per Ch. 43
+        }*//* //removed for Data Binding Tutorial per Ch. 43
 
-        /*viewModel.getResult().observe(viewLifecycleOwner, resultObserver)
+        *//*viewModel.getResult().observe(viewLifecycleOwner, resultObserver)
 
         binding.convertButton.setOnClickListener {
             if (binding.dollarText.text.isNotEmpty()) {
@@ -66,7 +66,14 @@ class MainFragment : Fragment() {
             } else {
                 binding.resultText.text = "No Value"
             }
-        }*/ //removed for Data Binding Tutorial per Ch. 43
+        }*//* //removed for Data Binding Tutorial per Ch. 43
+    }*/
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
+        binding.setVariable(myViewModel, viewModel)
     }
 
 }
