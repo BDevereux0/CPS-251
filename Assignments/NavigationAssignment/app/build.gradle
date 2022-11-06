@@ -1,20 +1,21 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
-    namespace 'com.ebookfrenzy.lifecycleawarenessapp'
-    compileSdk 32
+    namespace 'com.ebookfrenzy.navigationproject'
+    compileSdk 33
 
     buildFeatures{
         viewBinding true
     }
 
     defaultConfig {
-        applicationId "com.ebookfrenzy.lifecycleawarenessapp"
+        applicationId "com.ebookfrenzy.navigationproject"
         minSdk 26
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -44,8 +45,10 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 }

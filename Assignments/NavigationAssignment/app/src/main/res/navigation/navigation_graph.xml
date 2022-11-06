@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.ebookfrenzy.navigationproject.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/mainToDisplay"
+            app:destination="@id/displayImgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayImgFragment"
+        android:name="com.ebookfrenzy.navigationproject.DisplayImgFragment"
+        android:label="fragment_display_img"
+        tools:layout="@layout/fragment_display_img" >
+        <argument
+            android:name="ImageNumberActionArgument"
+            app:argType="string"
+            android:defaultValue="Nothing to Display" />
+    </fragment>
+</navigation>
