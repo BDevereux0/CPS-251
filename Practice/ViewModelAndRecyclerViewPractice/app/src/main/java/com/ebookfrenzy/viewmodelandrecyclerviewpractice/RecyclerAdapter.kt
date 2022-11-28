@@ -38,7 +38,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        val test = MainActivity().binding
+        /*val test = MainActivity().binding
         val y = MainActivity().viewModel
         val x: String = MainViewModel().getLowerName().toString()
         Log.i(Tag1,x)
@@ -51,7 +51,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         y.getName().observe(MainActivity(), resultObserver)
         test.button.setOnClickListener {
             y.nameToLower(test.inputText.text.toString())
-        }
-
+        }*/
+        viewHolder.recyclerOutput.text = "something"
     }
 }
